@@ -1,0 +1,27 @@
+# dependencies
+**/node_modules
+
+# logs
+**/*.logs
+**/yarn*.log
+
+# next.js
+**/.next/
+**/out/
+
+# production
+**/build
+**/dist
+
+# local env files
+**/*.env*
+
+# IDE
+.idea
+
+**/tsconfig*.tsbuildinfo
+
+# scripts
+/docker/remote
+/**/coverage
+
