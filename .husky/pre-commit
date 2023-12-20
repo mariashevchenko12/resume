@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "\e[1;93m[pre-commit] Running lint-staged (config is lint-staged.pre-commit.js)\033[0m"
+start_time=$(date +%s.%3N)
+yarn lint-staged -c lint-staged.js
+end_time=$(date +%s.%3N)
+elapsed=$(echo "scale=3; $end_time-$start_time" | bc -l | sed -e 's/^\./0./' -e 's/^-\./-0./')
+echo "\e[1;93m[pre-commit] Done in $(date -ud "@$elapsed" +'%M min %S sec %3N ms').\033[0m"
