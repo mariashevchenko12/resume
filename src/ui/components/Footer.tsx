@@ -13,7 +13,9 @@ export const Footer: React.FC<FooterType> = ({ number, linkedin, telegram, email
         <SocialContainer linkedin={linkedin} telegram={telegram} email={email} size={25} className={"pl-0 sm:px-20"} />
       </FooterItem>
       <FooterItem title={"Email"}>
-        <a href={`mailto:${email}`}>{email}</a>
+        <a className={"truncate"} href={`mailto:${email}`}>
+          {email}
+        </a>
       </FooterItem>
     </footer>
   )

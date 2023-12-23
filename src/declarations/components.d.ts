@@ -39,6 +39,15 @@ declare type ButtonLinkType = {
   className?: string
 }
 
+declare type MainButtonType = {
+  title: string
+  disabled?: boolean
+  type?: "button" | "submit" | "reset"
+  onClick?: () => void
+  isTransparent?: boolean
+  className?: string
+}
+
 declare type FooterType = {
   linkedin: string
   telegram: string
@@ -59,4 +68,12 @@ declare type TextType = {
 declare type BurgerType = {
   setIsFocused: Dispatch<SetStateAction<boolean>>
   className?: string
+}
+
+declare type ContactFormFieldType = {
+  label: string
+  validationFailed: boolean
+  type?: string
+  isTextarea?: boolean
+  rows?: number
 }
