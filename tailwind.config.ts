@@ -1,20 +1,39 @@
-import type { Config } from 'tailwindcss'
+const colors = {
+  buttons: "#337BAE",
+  white: "#FFFFFF",
+  mainBG: "#FFBEBD",
+  cardBG: "#FFD3D3",
+  cardBGTransparent: "rgba(255, 211, 211, 0.6)",
+  seaBlue: "#1A405F",
+}
 
-const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+module.exports = {
+  purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false,
   theme: {
+    colors: colors,
+    screens: {
+      xs: "470px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1100px",
+      "2xl": "1440px",
+      "3xl": "1950px",
+    },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "main-gradient": `linear-gradient(to right, ${colors.mainBG} 40%, ${colors.white} 1%)`,
       },
+      objectPosition: {
+        "center-top": "50% 20%",
+      },
+    },
+  },
+  variants: {
+    extend: {
+      fill: ["hover", "focus"],
     },
   },
   plugins: [],
 }
-export default config
