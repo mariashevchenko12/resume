@@ -15,7 +15,7 @@ export const Navbar: React.FC<NavbarType> = ({ name, position, menuItems }) => {
     <header className="w-full flex items-center justify-between h-28 px-7 fixed bg-white shadow-md z-20">
       <Link href={"/"} className="flex items-center" onClick={() => setSelected(name)}>
         <div className={"w-5 h-5 border border-buttons bg-buttons"} />
-        <TextH3 className={"text-2xl px-3.5"}>{name}</TextH3>
+        <TextH3 className={"!text-2xl px-3.5"}>{name}</TextH3>
         <TextH4 className="hidden sm:block">/</TextH4>
         <TextH4 className="hidden sm:block">{position}</TextH4>
       </Link>
@@ -34,7 +34,13 @@ export const Navbar: React.FC<NavbarType> = ({ name, position, menuItems }) => {
         )}
       >
         {map(menuItems, (item) => (
-          <MenuItem item={item} selected={selected} setSelected={setSelected} setIsFocused={setIsFocused} />
+          <MenuItem
+            key={item.title}
+            item={item}
+            selected={selected}
+            setSelected={setSelected}
+            setIsFocused={setIsFocused}
+          />
         ))}
       </div>
     </header>

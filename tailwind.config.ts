@@ -4,7 +4,10 @@ const colors = {
   mainBG: "#FFBEBD",
   cardBG: "#FFD3D3",
   cardBGTransparent: "rgba(255, 211, 211, 0.6)",
+  cardBGFormField: "rgba(255, 211, 211, 0.2)",
   seaBlue: "#1A405F",
+  disabled: "#717171",
+  wrongFormField: "#ff0000",
 }
 
 module.exports = {

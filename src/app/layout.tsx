@@ -1,6 +1,11 @@
+import React from "react"
 import type { Metadata } from "next"
 import { Nunito_Sans } from "next/font/google"
 import "./globals.css"
+import { navbar } from "@/constants/navbar"
+import { Navbar } from "@/ui/components/Navbar"
+import { footer } from "@/constants/footer"
+import { Footer } from "@/ui/components/Footer"
 
 const inter = Nunito_Sans({ subsets: ["latin"] })
 
@@ -12,7 +17,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar name={navbar.name} position={navbar.position} menuItems={navbar.menuItems} />
+        {children}
+        <Footer linkedin={footer.linkedin} telegram={footer.telegram} email={footer.email} number={footer.number} />
+      </body>
     </html>
   )
 }

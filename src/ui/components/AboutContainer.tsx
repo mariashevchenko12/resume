@@ -15,7 +15,7 @@ export const AboutContainer: React.FC<AboutContainerType> = ({
   description,
 }) => {
   return (
-    <div className={"w-full pt-44 pb-16 flex justify-center items-center flex-col xl:flex-row"}>
+    <div className={"w-full pb-16 flex justify-center items-center flex-col xl:flex-row"}>
       <div
         className={"flex flex-col border w-[70%] border-[transparent] shadow-xl xl:mr-7 xl:w-[45%] 2xl:w-1/3 3xl:w-1/4"}
       >
