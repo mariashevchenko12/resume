@@ -6,15 +6,15 @@ import { Field, Form } from "react-final-form"
 import { ContactFormField } from "@/ui/components/ContactFormField"
 import { MainButton } from "@/ui/components/MainButton"
 import { TextH3 } from "@/ui/components/texts/TextH3"
+import { TextWithSquare } from "@/ui/components/texts/TextWithSquare"
 
 export const ContactForm = () => {
   const [isOpen, setOpened] = useState(true)
   return (
-    <div className={"flex flex-col items-center mb-16"}>
-      <div className={"flex items-center"}>
-        <div className={"w-5 h-5 border border-buttons bg-buttons"} />
-        <TextH3 className={"text-2xl px-3.5"}>{isOpen ? "Let's talk!" : "Thank you!"}</TextH3>
-      </div>
+    <div className={"flex flex-col items-center pb-16"}>
+      <TextWithSquare>
+        <TextH3 className={"!text-buttons px-3.5"}>{isOpen ? "Let's talk!" : "Thank you!"}</TextH3>
+      </TextWithSquare>
       {isOpen ? (
         <Form
           onSubmit={(values: FormFieldsType) => {

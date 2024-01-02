@@ -11,6 +11,10 @@ declare type NavbarType = {
   menuItems: { title: string; url: string }[]
 }
 
+declare type TimelineType = {
+  timelineInfo: { date: string; place: string; position: string }[]
+}
+
 declare type AboutContainerType = {
   social: {
     linkedin: string
@@ -61,11 +65,12 @@ declare type FooterItemType = {
 }
 
 declare type TextType = {
-  children: string
+  children: string | ReactNode
   className?: string
 }
 
 declare type BurgerType = {
+  isFocused: boolean
   setIsFocused: Dispatch<SetStateAction<boolean>>
   className?: string
 }
