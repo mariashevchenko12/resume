@@ -1,7 +1,12 @@
 export const colors = {
-  buttons: "#337BAE",
-  white: "#FFFFFF",
+  buttons: "#FF583C",
+  white: "#C6CE9E",
   mainBG: "#FFBEBD",
-  cardBG: "#FFD3D3",
-  seaBlue: "#1A405F",
+  cardBG: "#A1BA94",
+  cardBGTransparent: "rgba(161, 186, 148, 0.6)",
+  cardBGFormField: "rgba(161, 186, 148, 0.4)",
+  seaBlue: "#2D112B",
+  disabled: "#717171",
+  wrongFormField: "#ff0000",
+  parallaxSection: "#FF583C",
 }
