@@ -1,0 +1,61 @@
+* {box-sizing: border-box;}
+html, body {
+    background: url("../images/sky.png") repeat;
+}
+
+.parallax {
+    perspective: 102px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    margin-left: 0;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 13%;
+    left: 0;
+}
+.parallax-layer0 {transform: translateZ(-300px) scale(4);}
+.parallax-layer1 {transform: translateZ(-250px) scale(3.5);}
+.parallax-layer2 {transform: translateZ(-200px) scale(3); }
+.parallax-layer3 {transform: translateZ(-150px) scale(2.5);}
+.parallax-layer4 {transform: translateZ(-100px) scale(2);}
+.parallax-layer5 {transform: translateZ(-50px) scale(1.5);}
+.parallax-layer6 {transform: translateZ(0px) scale(1);}
+
+.parallax-layer img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 40vh;
+    width: 100%;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+}
+
+.parallax-cover {
+    position: absolute;
+    top: 87%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.footer-roots {
+    background: url("../images/roots.png") repeat-x;
+}
+
+.footer-block {
+    background: url("../images/sky.png") repeat;
+}
+
+.main-block {
+    background: #2D112B;
+}

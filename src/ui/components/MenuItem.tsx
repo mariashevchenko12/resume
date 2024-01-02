@@ -2,6 +2,7 @@
 import React from "react"
 import clsx from "clsx"
 import Link from "next/link"
+import { scrollTo } from "@/utils/scrollTo"
 
 export const MenuItem: React.FC<MenuItemType> = ({ item, selected, setSelected, setIsFocused }) => {
   return (
@@ -10,11 +11,12 @@ export const MenuItem: React.FC<MenuItemType> = ({ item, selected, setSelected, 
       href={item.url}
       className={clsx(
         "uppercase p-4 text-sm font-light 3xl:text-xl",
-        selected === item.title ? "text-buttons" : "text-seaBlue",
+        selected === item.url ? "text-buttons" : "text-seaBlue",
       )}
       onClick={() => {
-        setSelected(item.title)
+        setSelected(item.url)
         setIsFocused(false)
+        scrollTo("main-block")
       }}
     >
       {item.title}

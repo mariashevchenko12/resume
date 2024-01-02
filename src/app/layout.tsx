@@ -4,8 +4,10 @@ import { Nunito_Sans } from "next/font/google"
 import "./globals.css"
 import { navbar } from "@/constants/navbar"
 import { Navbar } from "@/ui/components/Navbar"
-import { footer } from "@/constants/footer"
 import { Footer } from "@/ui/components/Footer"
+import { footer } from "@/constants/footer"
+import "./parallax.scss"
+import { ParallaxBackground } from "@/ui/components/ParallaxBackground"
 
 const inter = Nunito_Sans({ subsets: ["latin"] })
 
@@ -18,9 +20,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar name={navbar.name} position={navbar.position} menuItems={navbar.menuItems} />
-        {children}
-        <Footer linkedin={footer.linkedin} telegram={footer.telegram} email={footer.email} number={footer.number} />
+        <div className="parallax w-full">
+          <ParallaxBackground />
+          <div className="parallax-cover">
+            <Navbar name={navbar.name} position={navbar.position} menuItems={navbar.menuItems} />
+            <div className={"main-block pt-12"}>{children}</div>
+            <div className={"relative footer-block -mt-1 h-96"}>
+              <div className={"footer-roots absolute h-full -top-1 w-full z-10"}></div>
+              <div className={"absolute w-full bottom-0"}>
+                <Footer
+                  linkedin={footer.linkedin}
+                  telegram={footer.telegram}
+                  email={footer.email}
+                  number={footer.number}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   )

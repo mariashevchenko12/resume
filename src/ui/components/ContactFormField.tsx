@@ -12,7 +12,7 @@ export const ContactFormField: React.FC<ContactFormFieldType> = ({
 }) => {
   return (
     <div className={"my-3 text-left"}>
-      <label htmlFor={label} className="font-bold text-gray-label-title theme-colored-label-title">
+      <label htmlFor={label} className="font-bold text-seaBlue">
         {label}
         <span className={"text-buttons"}>*</span>
       </label>
@@ -23,7 +23,7 @@ export const ContactFormField: React.FC<ContactFormFieldType> = ({
           rows={rows}
           placeholder={`Enter ${label}`}
           className={clsx(
-            "bg-cardBGFormField w-full mt-4 border-b-2 border-disabled outline-none focus:border-buttons",
+            "bg-cardBGFormField placeholder-cardBGTransparent w-full mt-4 border-b-2 border-disabled outline-none focus:border-seaBlue",
             {
               "border-wrongFormField": validationFailed,
             },
@@ -36,7 +36,7 @@ export const ContactFormField: React.FC<ContactFormFieldType> = ({
           type={type}
           placeholder={`Enter ${label}`}
           className={clsx(
-            "bg-cardBGFormField w-full mt-4 border-b-2 border-disabled outline-none focus:border-buttons",
+            "bg-cardBGFormField placeholder-cardBGTransparent w-full mt-4 border-b-2 border-disabled outline-none focus:border-seaBlue",
             {
               "border-wrongFormField": validationFailed,
             },

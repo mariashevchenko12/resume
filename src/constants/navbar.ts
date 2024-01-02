@@ -4,7 +4,7 @@ export const navbar: NavbarType = {
   menuItems: [
     { title: "About me", url: "/" },
     { title: "Resume", url: "/resume" },
-    { title: "Projects", url: "/projects" },
+    { title: "Skills", url: "/skills" },
     { title: "Contacts", url: "/contacts" },
   ],
 }
