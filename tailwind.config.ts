@@ -8,7 +8,7 @@ const colors = {
   seaBlue: "#2D112B",
   disabled: "#717171",
   wrongFormField: "#ff0000",
-  parallaxSection: "#FF583C",
+  buttonsTransparent: "rgba(255, 88, 60, 0.3)",
 }
 
 module.exports = {
@@ -17,6 +17,7 @@ module.exports = {
   theme: {
     colors: colors,
     screens: {
+      xxs: "375px",
       xs: "470px",
       sm: "640px",
       md: "768px",
