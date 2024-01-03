@@ -7,9 +7,6 @@ export const aboutContainer: AboutContainerType = {
   firstName: "Mariia",
   lastName: "Shevchenko",
   position: "Full Stack Web Developer",
-  subtitle: "Here's who I am & what I do",
-  description:
-    "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double\n" +
-    "          click me to add your own content and make changes to the font. I’m a great place for you to tell a story and\n" +
-    "          let your users know a little more about you.",
+  subtitle: "I'm a good eggplant",
+  description: "Experienced Full Stack Web Developer",
 }

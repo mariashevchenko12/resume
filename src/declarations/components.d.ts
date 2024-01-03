@@ -82,3 +82,9 @@ declare type ContactFormFieldType = {
   isTextarea?: boolean
   rows?: number
 }
+
+declare type ProgressBarType = {
+  title: string
+  value: number
+  index?: number
+}

@@ -44,7 +44,7 @@ export const AboutContainer: React.FC<AboutContainerType> = ({
         <h1 className={"text-6xl font-black text-end xl:text-start xl:text-8xl 2xl:text-9xl"}>Hello</h1>
         <TextH3 className={"mt-2 !text-white text-end xl:text-start"}>{subtitle}</TextH3>
         <div className={"flex flex-col items-end justify-end xs:flex-row xl:justify-start"}>
-          <ButtonLink url={"/resume"} title={"Resume"} className={"mr-0 xs:mr-6"} />
+          <ButtonLink url={"/experience"} title={"Experience"} className={"mr-0 xs:mr-6"} />
           <ButtonLink url={"/skills"} title={"Skills"} isTransparent={true} className={"mr-0"} />
         </div>
         <p className={"text-xl font-extralight text-end xl:text-start 2xl:text-2xl 3xl:text-3xl"}>{description}</p>
